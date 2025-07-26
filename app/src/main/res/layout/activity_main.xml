@@ -1,67 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
-    android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".MainActivity"
+    tools:context="com.example.emergencydropalert.MainActivity"
     android:background="#000000">
 
-    <TextView
-        android:id="@+id/status_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:padding="16dp" />
-    <TextView
-        android:id="@+id/speed_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Speed: 0 km/h"
-        android:textSize="18sp"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="16dp"
-        android:layout_gravity="center"/>
-
-
-    <Button
-        android:id="@+id/start_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start Monitoring"
-        android:layout_marginTop="16dp" />
-
-    <Button
-        android:id="@+id/stop_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Stop Monitoring"
-        android:layout_marginTop="8dp" />
-
-    <Button
-        android:id="@+id/cancel_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cancel Alert"
-        android:layout_marginTop="8dp" />
-
-    <Button
-        android:id="@+id/openContactsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fill the Emergency Contacts"
-        android:layout_marginTop="8dp" />
-
-
-    <FrameLayout
-        android:id="@+id/fragment_container"
+    <!--//comment -->
+    <!--fragments container-->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"
+        tools:layout="@layout/fragments_contact"
+        />
 
-</LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

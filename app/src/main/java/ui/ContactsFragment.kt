@@ -80,7 +80,5 @@ class ContactsFragment : Fragment() {
             showAddContactDialog()
         }
 
-
-
     }
 }
