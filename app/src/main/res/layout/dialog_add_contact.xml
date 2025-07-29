@@ -10,6 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Name" />
+    
+    <Spinner
+        android:id="@+id/country_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
     <EditText
         android:id="@+id/phoneInput"

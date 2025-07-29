@@ -40,6 +40,7 @@ android {
 
     buildFeatures {
         compose = true
+        viewBinding = true
     }
 }
 
@@ -52,11 +53,11 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-
+    implementation("com.googlecode.libphonenumber:libphonenumber:8.13.18")
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
-
+    implementation("com.googlecode.libphonenumber:libphonenumber:8.13.18")
     // ✅ ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
@@ -67,6 +68,7 @@ dependencies {
     implementation(libs.androidx.room.common.jvm)
     // Update Room dependencies to use version 2.7.2 for consistency
     implementation("androidx.room:room-runtime:2.7.2")
+    //implementation(libs.mediation.test.suite)
     kapt("androidx.room:room-compiler:2.7.2") // Changed from 2.6.1 to 2.7.2
     implementation("androidx.room:room-ktx:2.7.2")
     implementation(libs.androidx.recyclerview)

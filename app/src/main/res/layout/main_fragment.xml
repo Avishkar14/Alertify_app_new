@@ -15,7 +15,7 @@
             android:id="@+id/status_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Status"
+            android:text=" "
             android:textSize="18sp"
             android:gravity="center"
             android:textColor="#FFFFFF"
@@ -25,7 +25,7 @@
             android:id="@+id/speed_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Speed"
+            android:text="Speed: 0 km/h"
             android:textColor="#FFFFFF"
             android:layout_marginBottom="16dp" />
 

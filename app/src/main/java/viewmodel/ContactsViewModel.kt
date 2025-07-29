@@ -20,7 +20,8 @@ class ContactsViewModel( private val dao: EmergencyContactDao ) :ViewModel(){
 //    }
     fun addContact(name: String, phone: String) {
         viewModelScope.launch {
-            dao.insert(EmergencyContact(name = name, phone = phone))
+            val contact = EmergencyContact(name = name, phone = phone)
+            dao.insert(contact)
         }
     }
 
